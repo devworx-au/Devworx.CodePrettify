@@ -1,0 +1,22 @@
+﻿@{
+    var themeName = (string) Model.ThemeName;
+    string themeResource;
+    if (!string.IsNullOrWhiteSpace(themeName)) {
+        themeResource = "prettify-" + themeName.Trim();
+    }
+    else {
+        themeResource = "prettify-default";
+    }
+
+    Style.Require(themeResource).AtHead();
+    Script.Require("prettify-js").AtFoot();
+}
+@using (Script.Foot()) {
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // remove and add to handle the case where one element has the class defined explicitly and the other does not.
+            $('pre, code').removeClass('prettyprint').addClass('prettyprint');
+            prettyPrint();
+        });
+    </script>
+}

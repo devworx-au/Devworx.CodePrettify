@@ -1,0 +1,12 @@
+Name: Google Code Prettify
+AntiForgery: enabled
+Author: Peter Davis
+Website: https://github.com/devworx-au/Orchard-Code-Prettify-Module
+Version: 1.0.0
+OrchardVersion: 1.8
+Description: Provides code prettify support for formatting code in blog posts. (See: https://code.google.com/p/google-code-prettify/)
+Features:
+    Devworx.CodePrettify:
+        Description: Provides code prettify support for formatting code in blog posts. (See: https://code.google.com/p/google-code-prettify/)
+        Category: Publishing
+        Dependencies: Orchard.Blogs, Orchard.jQuery

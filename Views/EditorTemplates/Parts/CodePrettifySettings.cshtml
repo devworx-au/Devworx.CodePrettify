@@ -1,0 +1,9 @@
+﻿@model Devworx.CodePrettify.ViewModels.CodePrettifySettingsViewModel
+
+<fieldset>
+    <legend>@T("Theme")</legend>
+    <div>
+        @Html.DropDownList("Theme", new[] {new SelectListItem {Text = T("").Text, Value = ""}}.Union(new SelectList(Model.Themes, "", "", Model.PrettifySettingsPart.Theme)))
+        @Html.ValidationMessage("TimeZone", "*")
+    </div>
+</fieldset>

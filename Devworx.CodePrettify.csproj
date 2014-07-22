@@ -1,0 +1,461 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1A7DDD40-4D94-41FD-B940-B57F377CC2D5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Devworx.CodePrettify</RootNamespace>
+    <AssemblyName>Devworx.CodePrettify</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\aspnetmvc\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Configuration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-apollo.js" />
+    <Content Include="Scripts\lang-apollo.min.js">
+      <DependentUpon>lang-apollo.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-basic.js" />
+    <Content Include="Scripts\lang-basic.min.js">
+      <DependentUpon>lang-basic.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-clj.js" />
+    <Content Include="Scripts\lang-clj.min.js">
+      <DependentUpon>lang-clj.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-css.js" />
+    <Content Include="Scripts\lang-css.min.js">
+      <DependentUpon>lang-css.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-dart.js" />
+    <Content Include="Scripts\lang-dart.min.js">
+      <DependentUpon>lang-dart.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-erlang.js" />
+    <Content Include="Scripts\lang-erlang.min.js">
+      <DependentUpon>lang-erlang.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-go.js" />
+    <Content Include="Scripts\lang-go.min.js">
+      <DependentUpon>lang-go.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-hs.js" />
+    <Content Include="Scripts\lang-hs.min.js">
+      <DependentUpon>lang-hs.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-lisp.js" />
+    <Content Include="Scripts\lang-lisp.min.js">
+      <DependentUpon>lang-lisp.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-llvm.js" />
+    <Content Include="Scripts\lang-llvm.min.js">
+      <DependentUpon>lang-llvm.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-lua.js" />
+    <Content Include="Scripts\lang-lua.min.js">
+      <DependentUpon>lang-lua.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-matlab.js" />
+    <Content Include="Scripts\lang-matlab.min.js">
+      <DependentUpon>lang-matlab.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-ml.js" />
+    <Content Include="Scripts\lang-ml.min.js">
+      <DependentUpon>lang-ml.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-mumps.js" />
+    <Content Include="Scripts\lang-mumps.min.js">
+      <DependentUpon>lang-mumps.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-n.js" />
+    <Content Include="Scripts\lang-n.min.js">
+      <DependentUpon>lang-n.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-pascal.js" />
+    <Content Include="Scripts\lang-pascal.min.js">
+      <DependentUpon>lang-pascal.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-proto.js" />
+    <Content Include="Scripts\lang-proto.min.js">
+      <DependentUpon>lang-proto.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-r.js" />
+    <Content Include="Scripts\lang-r.min.js">
+      <DependentUpon>lang-r.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-rd.js" />
+    <Content Include="Scripts\lang-rd.min.js">
+      <DependentUpon>lang-rd.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-scala.js" />
+    <Content Include="Scripts\lang-scala.min.js">
+      <DependentUpon>lang-scala.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-sql.js" />
+    <Content Include="Scripts\lang-sql.min.js">
+      <DependentUpon>lang-sql.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-tcl.js" />
+    <Content Include="Scripts\lang-tcl.min.js">
+      <DependentUpon>lang-tcl.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-tex.js" />
+    <Content Include="Scripts\lang-tex.min.js">
+      <DependentUpon>lang-tex.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-vb.js" />
+    <Content Include="Scripts\lang-vb.min.js">
+      <DependentUpon>lang-vb.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-vhdl.js" />
+    <Content Include="Scripts\lang-vhdl.min.js">
+      <DependentUpon>lang-vhdl.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-wiki.js" />
+    <Content Include="Scripts\lang-wiki.min.js">
+      <DependentUpon>lang-wiki.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-xq.js" />
+    <Content Include="Scripts\lang-xq.min.js">
+      <DependentUpon>lang-xq.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\lang-yaml.js" />
+    <Content Include="Scripts\lang-yaml.min.js">
+      <DependentUpon>lang-yaml.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\prettify.min.js">
+      <DependentUpon>prettify.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\run_prettify.min.js">
+      <DependentUpon>run_prettify.js</DependentUpon>
+    </Content>
+    <Content Include="Styles\desert.min.css">
+      <DependentUpon>desert.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\github.min.css">
+      <DependentUpon>github.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\hemisu-dark.min.css">
+      <DependentUpon>hemisu-dark.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\hemisu-light.min.css">
+      <DependentUpon>hemisu-light.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\prettify.css" />
+    <Content Include="Scripts\prettify.js" />
+    <Content Include="Scripts\run_prettify.js" />
+    <Content Include="Styles\desert.css" />
+    <Content Include="Styles\github.css" />
+    <Content Include="Styles\hemisu-dark.css" />
+    <Content Include="Styles\hemisu-light.css" />
+    <Content Include="Styles\prettify.min.css">
+      <DependentUpon>prettify.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\son-of-obsidian.css" />
+    <Content Include="Styles\son-of-obsidian.min.css">
+      <DependentUpon>son-of-obsidian.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\sunburst.css" />
+    <Content Include="Styles\sunburst.min.css">
+      <DependentUpon>sunburst.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\tomorrow-night-blue.css" />
+    <Content Include="Styles\tomorrow-night-blue.min.css">
+      <DependentUpon>tomorrow-night-blue.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\tomorrow-night-bright.css" />
+    <Content Include="Styles\tomorrow-night-bright.min.css">
+      <DependentUpon>tomorrow-night-bright.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\tomorrow-night-eighties.css" />
+    <Content Include="Styles\tomorrow-night-eighties.min.css">
+      <DependentUpon>tomorrow-night-eighties.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\tomorrow-night.css" />
+    <Content Include="Styles\tomorrow-night.min.css">
+      <DependentUpon>tomorrow-night.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\tomorrow.css" />
+    <Content Include="Styles\tomorrow.min.css">
+      <DependentUpon>tomorrow.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\vibrant-ink.css" />
+    <Content Include="Styles\vibrant-ink.min.css">
+      <DependentUpon>vibrant-ink.css</DependentUpon>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="Scripts\Web.config" />
+    <Content Include="Styles\Web.config" />
+    <Content Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Module.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
+      <Project>{2D1D92BB-4555-4CBE-8D0E-63563D6CE4C6}</Project>
+      <Name>Orchard.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Orchard.Core.csproj">
+      <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
+      <Name>Orchard.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Drivers\CodePrettifyPartDriver.cs" />
+    <Compile Include="Drivers\CodePrettifySettingsPartDriver.cs" />
+    <Compile Include="Handlers\CodePrettifyPartHandler.cs" />
+    <Compile Include="Handlers\CodePrettifySettingsPartHandler.cs" />
+    <Compile Include="ViewModels\CodePrettifySettingsViewModel.cs" />
+    <Compile Include="ResourceManifest.cs" />
+    <Compile Include="Models\CodePrettifyPart.cs" />
+    <Compile Include="Models\CodePrettifySettingsPart.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Placement.info" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\EditorTemplates\Parts\CodePrettifySettings.cshtml" />
+    <Content Include="Views\CodePrettify.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-apollo.min.js.map">
+      <DependentUpon>lang-apollo.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-basic.min.js.map">
+      <DependentUpon>lang-basic.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-clj.min.js.map">
+      <DependentUpon>lang-clj.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-css.min.js.map">
+      <DependentUpon>lang-css.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-dart.min.js.map">
+      <DependentUpon>lang-dart.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-erlang.min.js.map">
+      <DependentUpon>lang-erlang.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-go.min.js.map">
+      <DependentUpon>lang-go.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-hs.min.js.map">
+      <DependentUpon>lang-hs.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-lisp.min.js.map">
+      <DependentUpon>lang-lisp.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-llvm.min.js.map">
+      <DependentUpon>lang-llvm.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-lua.min.js.map">
+      <DependentUpon>lang-lua.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-matlab.min.js.map">
+      <DependentUpon>lang-matlab.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-ml.min.js.map">
+      <DependentUpon>lang-ml.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-mumps.min.js.map">
+      <DependentUpon>lang-mumps.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-n.min.js.map">
+      <DependentUpon>lang-n.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-pascal.min.js.map">
+      <DependentUpon>lang-pascal.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-proto.min.js.map">
+      <DependentUpon>lang-proto.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-r.min.js.map">
+      <DependentUpon>lang-r.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-rd.min.js.map">
+      <DependentUpon>lang-rd.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-scala.min.js.map">
+      <DependentUpon>lang-scala.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-sql.min.js.map">
+      <DependentUpon>lang-sql.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-tcl.min.js.map">
+      <DependentUpon>lang-tcl.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-tex.min.js.map">
+      <DependentUpon>lang-tex.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-vb.min.js.map">
+      <DependentUpon>lang-vb.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-vhdl.min.js.map">
+      <DependentUpon>lang-vhdl.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-wiki.min.js.map">
+      <DependentUpon>lang-wiki.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-xq.min.js.map">
+      <DependentUpon>lang-xq.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\lang-yaml.min.js.map">
+      <DependentUpon>lang-yaml.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\prettify.min.js.map">
+      <DependentUpon>prettify.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\run_prettify.min.js.map">
+      <DependentUpon>run_prettify.min.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" DependsOnTargets="AfterBuildCompiler">
+    <PropertyGroup>
+      <AreasManifestDir>$(ProjectDir)\..\Manifests</AreasManifestDir>
+    </PropertyGroup>
+    <!-- If this is an area child project, uncomment the following line:
+    <CreateAreaManifest AreaName="$(AssemblyName)" AreaType="Child" AreaPath="$(ProjectDir)" ManifestPath="$(AreasManifestDir)" ContentFiles="@(Content)" />
+    -->
+    <!-- If this is an area parent project, uncomment the following lines:
+    <CreateAreaManifest AreaName="$(AssemblyName)" AreaType="Parent" AreaPath="$(ProjectDir)" ManifestPath="$(AreasManifestDir)" ContentFiles="@(Content)" />
+    <CopyAreaManifests ManifestPath="$(AreasManifestDir)" CrossCopy="false" RenameViews="true" />
+    -->
+  </Target>
+  <Target Name="AfterBuildCompiler" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>45979</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://orchard.codeplex.com</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
