@@ -34,11 +34,7 @@ namespace Devworx.CodePrettify.Drivers {
         }
 
         protected override DriverResult Editor(CodePrettifySettingsPart part, IUpdateModel updater, dynamic shapeHelper) {
-            var viewModel = new CodePrettifySettingsViewModel {
-                PrettifySettingsPart = part
-            };
-
-            updater.TryUpdateModel(viewModel, Prefix, null, null);
+           updater.TryUpdateModel(part, Prefix, null, null);
             return Editor(part, shapeHelper);
         }
 
