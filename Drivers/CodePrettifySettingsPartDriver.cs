@@ -1,13 +1,11 @@
 ﻿using System.Collections.Generic;
 using Devworx.CodePrettify.Models;
 using Devworx.CodePrettify.ViewModels;
-using JetBrains.Annotations;
 using Orchard.ContentManagement;
 using Orchard.ContentManagement.Drivers;
 using Orchard.Localization;
 
 namespace Devworx.CodePrettify.Drivers {
-    [UsedImplicitly]
     public class CodePrettifySettingsPartDriver : ContentPartDriver<CodePrettifySettingsPart> {
         private const string TemplateName = "Parts/CodePrettifySettings";
 

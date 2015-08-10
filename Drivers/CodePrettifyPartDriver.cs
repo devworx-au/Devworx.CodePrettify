@@ -1,11 +1,9 @@
 ﻿using Devworx.CodePrettify.Models;
-using JetBrains.Annotations;
 using Orchard;
 using Orchard.ContentManagement;
 using Orchard.ContentManagement.Drivers;
 
 namespace Devworx.CodePrettify.Drivers {
-    [UsedImplicitly]
     public class CodePrettifyPartDriver : ContentPartDriver<CodePrettifyPart> {
         private readonly IOrchardServices _services;
 

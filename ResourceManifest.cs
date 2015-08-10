@@ -6,10 +6,10 @@ namespace Devworx.CodePrettify {
             var manifest = builder.Add();
 
             //Styles
-            manifest.DefineStyle("prettify-default").SetUrl("prettify.min.css", "prettify.css").SetVersion("r298")
+            manifest.DefineStyle("prettify-default").SetUrl("prettify.min.css", "prettify.css").SetVersion("1.298")
                 .SetCdn("//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css", "//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.css", true);
 
-            manifest.DefineStyle("prettify-desert").SetUrl("desert.min.css", "desert.css").SetVersion("r298");
+            manifest.DefineStyle("prettify-desert").SetUrl("desert.min.css", "desert.css").SetVersion("1.298");
             manifest.DefineStyle("prettify-github").SetUrl("github.min.css", "github.css").SetVersion("1.0");
             manifest.DefineStyle("prettify-hemisu-dark").SetUrl("hemisu-dark.min.css", "hemisu-dark.css").SetVersion("1.0");
             manifest.DefineStyle("prettify-hemisu-light").SetUrl("hemisu-light.min.css", "hemisu-light.css").SetVersion("1.0");
@@ -23,7 +23,7 @@ namespace Devworx.CodePrettify {
             manifest.DefineStyle("prettify-vibrant-ink").SetUrl("vibrant-ink.min.css", "vibrant-ink.css").SetVersion("1.0");
 
             // Scripts
-            manifest.DefineScript("prettify-js").SetUrl("prettify.min.js", "prettify.js").SetVersion("r298")
+            manifest.DefineScript("prettify-js").SetUrl("prettify.min.js", "prettify.js").SetVersion("1.298")
                 .SetCdn("//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js", "//cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js", true).SetDependencies("jQuery");
         }
     }
