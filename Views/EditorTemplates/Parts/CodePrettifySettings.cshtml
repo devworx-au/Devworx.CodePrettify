@@ -3,13 +3,12 @@
 <fieldset>
     <legend>@T("Code Prettify")</legend>
     <div>
-        @Html.EditorFor(m => m.PrettifySettingsPart.UseAutoLoader)
-        <label for="@Html.FieldIdFor(m => m.PrettifySettingsPart.UseAutoLoader)" class="forcheckbox">@T("Use default async auto load script.")</label>
-        @Html.ValidationMessageFor(m => m.PrettifySettingsPart.UseAutoLoader)
+        @Html.CheckBox("UseAutoLoader", Model.PrettifySettingsPart.UseAutoLoader)
+        <label for="CodePrettifySettings_UseAutoLoader" class="forcheckbox">@T("Use default async auto load script.")</label>
         <span class="hint">@T("If checked, will be loaded using the 'run_prettify.js' script from github asynchronously, and only themes available in the <a target=\"_blank\" href=\"https://cdn.rawgit.com/google/code-prettify/master/styles/index.html\">theme gallery</a> are supported. You will also have to manually add the class=\"prettyprint\" to all &lt;pre&gt; and/or &lt;code&gt; tags that need to be prettyprint'd")</span>
     </div>
     <div>
-        <label for="Theme">@T("Theme")</label>
+        <label for="CodePrettifySettings_Theme">@T("Theme")</label>
         @Html.DropDownList("Theme", new[] {new SelectListItem {Text = T("").Text, Value = ""}}.Union(new SelectList(Model.Themes, "", "", Model.PrettifySettingsPart.Theme)))
         @Html.ValidationMessage("Theme", "*")
     </div>
