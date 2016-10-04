@@ -24,7 +24,7 @@ namespace Devworx.CodePrettify.Drivers {
                 var themes = GetThemes();
                 var viewModel = new CodePrettifySettingsViewModel {
                     PrettifySettingsPart = part,
-                    Themes = themes
+                    Themes = themes,
                 };
 
                 return shapeHelper.EditorTemplate(TemplateName: TemplateName, Model: viewModel, Prefix: Prefix);
@@ -40,10 +40,11 @@ namespace Devworx.CodePrettify.Drivers {
             return new[] {
                 "default"
                 , "desert"
+                , "doxy"
                 , "github"
                 , "hemisu-dark"
                 , "hemisu-light"
-                , "son-of-obsidian"
+                , "sons-of-obsidian"
                 , "sunburst"
                 , "tomorrow-night-blue"
                 , "tomorrow-night-bright"

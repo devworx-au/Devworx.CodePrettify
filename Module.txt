@@ -2,12 +2,12 @@ Name: Google Code Prettify
 AntiForgery: enabled
 Author: Devworx
 Website: https://github.com/devworx-au/Devworx.CodePrettify
-Version: 1.1.1
-OrchardVersion: 1.9
+Version: 2.0
+OrchardVersion: 1.10
 Description: Provides code prettify support for formatting code in blog posts.
 FeatureDescription: Provides code prettify support for formatting code in blog posts. (See: https://code.google.com/p/google-code-prettify/)
                      * Enabled CDN Support using cdnjs: http://cdnjs.com/libraries/prettify
 					 * Configured minified and non-minified css and js resources
 Category: Publishing
-Dependencies: Orchard.Blogs, Orchard.jQuery
+Dependencies: Orchard.Blogs, Orchard.Resources
 Tags: blog, Code, format, Google, Code, prettify, SyntaxHighlighting

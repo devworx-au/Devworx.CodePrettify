@@ -17,7 +17,7 @@ namespace Devworx.CodePrettify.Drivers {
 
             return ContentShape(
                 "CodePrettify"
-                , () => shapeHelper.CodePrettify(ThemeName: themeName)
+                , () => shapeHelper.CodePrettify(ThemeName: themeName, UseAutoLoader: settings.UseAutoLoader)
                 );
         }
     }

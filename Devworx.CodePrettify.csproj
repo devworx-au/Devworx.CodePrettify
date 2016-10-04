@@ -12,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Devworx.CodePrettify</RootNamespace>
     <AssemblyName>Devworx.CodePrettify</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -49,143 +49,111 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\lib\aspnetmvc\System.Web.Mvc.dll</HintPath>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\lang-aea.js" />
+    <Content Include="Scripts\lang-agc.js" />
     <Content Include="Scripts\lang-apollo.js" />
-    <Content Include="Scripts\lang-apollo.min.js">
-      <DependentUpon>lang-apollo.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-basic.js" />
-    <Content Include="Scripts\lang-basic.min.js">
-      <DependentUpon>lang-basic.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\lang-cbm.js" />
+    <Content Include="Scripts\lang-cl.js" />
     <Content Include="Scripts\lang-clj.js" />
-    <Content Include="Scripts\lang-clj.min.js">
-      <DependentUpon>lang-clj.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-css.js" />
-    <Content Include="Scripts\lang-css.min.js">
-      <DependentUpon>lang-css.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-dart.js" />
-    <Content Include="Scripts\lang-dart.min.js">
-      <DependentUpon>lang-dart.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\lang-el.js" />
+    <Content Include="Scripts\lang-erl.js" />
     <Content Include="Scripts\lang-erlang.js" />
-    <Content Include="Scripts\lang-erlang.min.js">
-      <DependentUpon>lang-erlang.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\lang-fs.js" />
     <Content Include="Scripts\lang-go.js" />
-    <Content Include="Scripts\lang-go.min.js">
-      <DependentUpon>lang-go.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-hs.js" />
-    <Content Include="Scripts\lang-hs.min.js">
-      <DependentUpon>lang-hs.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\lang-lasso.js" />
+    <Content Include="Scripts\lang-lassoscript.js" />
+    <Content Include="Scripts\lang-latex.js" />
+    <Content Include="Scripts\lang-lgt.js" />
     <Content Include="Scripts\lang-lisp.js" />
-    <Content Include="Scripts\lang-lisp.min.js">
-      <DependentUpon>lang-lisp.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\lang-ll.js" />
     <Content Include="Scripts\lang-llvm.js" />
-    <Content Include="Scripts\lang-llvm.min.js">
-      <DependentUpon>lang-llvm.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\lang-logtalk.js" />
+    <Content Include="Scripts\lang-ls.js" />
+    <Content Include="Scripts\lang-lsp.js" />
     <Content Include="Scripts\lang-lua.js" />
-    <Content Include="Scripts\lang-lua.min.js">
-      <DependentUpon>lang-lua.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-matlab.js" />
-    <Content Include="Scripts\lang-matlab.min.js">
-      <DependentUpon>lang-matlab.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-ml.js" />
-    <Content Include="Scripts\lang-ml.min.js">
-      <DependentUpon>lang-ml.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-mumps.js" />
-    <Content Include="Scripts\lang-mumps.min.js">
-      <DependentUpon>lang-mumps.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-n.js" />
-    <Content Include="Scripts\lang-n.min.js">
-      <DependentUpon>lang-n.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\lang-nemerle.js" />
     <Content Include="Scripts\lang-pascal.js" />
-    <Content Include="Scripts\lang-pascal.min.js">
-      <DependentUpon>lang-pascal.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-proto.js" />
-    <Content Include="Scripts\lang-proto.min.js">
-      <DependentUpon>lang-proto.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-r.js" />
-    <Content Include="Scripts\lang-r.min.js">
-      <DependentUpon>lang-r.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-rd.js" />
-    <Content Include="Scripts\lang-rd.min.js">
-      <DependentUpon>lang-rd.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\lang-rkt.js" />
+    <Content Include="Scripts\lang-rust.js" />
+    <Content Include="Scripts\lang-s.js" />
     <Content Include="Scripts\lang-scala.js" />
-    <Content Include="Scripts\lang-scala.min.js">
-      <DependentUpon>lang-scala.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\lang-scm.js" />
+    <Content Include="Scripts\lang-Splus.js" />
     <Content Include="Scripts\lang-sql.js" />
-    <Content Include="Scripts\lang-sql.min.js">
-      <DependentUpon>lang-sql.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\lang-ss.js" />
+    <Content Include="Scripts\lang-swift.js" />
     <Content Include="Scripts\lang-tcl.js" />
-    <Content Include="Scripts\lang-tcl.min.js">
-      <DependentUpon>lang-tcl.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-tex.js" />
-    <Content Include="Scripts\lang-tex.min.js">
-      <DependentUpon>lang-tex.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-vb.js" />
-    <Content Include="Scripts\lang-vb.min.js">
-      <DependentUpon>lang-vb.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\lang-vbs.js" />
+    <Content Include="Scripts\lang-vhd.js" />
     <Content Include="Scripts\lang-vhdl.js" />
-    <Content Include="Scripts\lang-vhdl.min.js">
-      <DependentUpon>lang-vhdl.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-wiki.js" />
-    <Content Include="Scripts\lang-wiki.min.js">
-      <DependentUpon>lang-wiki.js</DependentUpon>
-    </Content>
     <Content Include="Scripts\lang-xq.js" />
-    <Content Include="Scripts\lang-xq.min.js">
-      <DependentUpon>lang-xq.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\lang-xquery.js" />
     <Content Include="Scripts\lang-yaml.js" />
-    <Content Include="Scripts\lang-yaml.min.js">
-      <DependentUpon>lang-yaml.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\prettify.min.js">
-      <DependentUpon>prettify.js</DependentUpon>
-    </Content>
-    <Content Include="Scripts\run_prettify.min.js">
-      <DependentUpon>run_prettify.js</DependentUpon>
-    </Content>
+    <Content Include="Scripts\lang-yml.js" />
+    <Content Include="Scripts\prettify.css" />
+    <Content Include="Scripts\prettify.js" />
+    <Content Include="Scripts\run_prettify.js" />
+    <Content Include="Styles\doxy.css" />
     <Content Include="Styles\desert.min.css">
       <DependentUpon>desert.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\doxy.min.css">
+      <DependentUpon>doxy.css</DependentUpon>
     </Content>
     <Content Include="Styles\github.min.css">
       <DependentUpon>github.css</DependentUpon>
@@ -196,19 +164,17 @@
     <Content Include="Styles\hemisu-light.min.css">
       <DependentUpon>hemisu-light.css</DependentUpon>
     </Content>
-    <Content Include="Styles\prettify.css" />
-    <Content Include="Scripts\prettify.js" />
-    <Content Include="Scripts\run_prettify.js" />
     <Content Include="Styles\desert.css" />
     <Content Include="Styles\github.css" />
     <Content Include="Styles\hemisu-dark.css" />
     <Content Include="Styles\hemisu-light.css" />
+    <Content Include="Styles\prettify.css" />
     <Content Include="Styles\prettify.min.css">
       <DependentUpon>prettify.css</DependentUpon>
     </Content>
-    <Content Include="Styles\son-of-obsidian.css" />
-    <Content Include="Styles\son-of-obsidian.min.css">
-      <DependentUpon>son-of-obsidian.css</DependentUpon>
+    <Content Include="Styles\sons-of-obsidian.css" />
+    <Content Include="Styles\sons-of-obsidian.min.css">
+      <DependentUpon>sons-of-obsidian.css</DependentUpon>
     </Content>
     <Content Include="Styles\sunburst.css" />
     <Content Include="Styles\sunburst.min.css">
@@ -257,6 +223,7 @@
   <ItemGroup>
     <Compile Include="Drivers\CodePrettifyPartDriver.cs" />
     <Compile Include="Drivers\CodePrettifySettingsPartDriver.cs" />
+    <Compile Include="Filters\ScriptInjectingFilter.cs" />
     <Compile Include="Handlers\CodePrettifyPartHandler.cs" />
     <Compile Include="Handlers\CodePrettifySettingsPartHandler.cs" />
     <Compile Include="ViewModels\CodePrettifySettingsViewModel.cs" />
@@ -272,154 +239,7 @@
     <Content Include="Views\CodePrettify.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Scripts\lang-apollo.min.js.map">
-      <DependentUpon>lang-apollo.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-basic.min.js.map">
-      <DependentUpon>lang-basic.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-clj.min.js.map">
-      <DependentUpon>lang-clj.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-css.min.js.map">
-      <DependentUpon>lang-css.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-dart.min.js.map">
-      <DependentUpon>lang-dart.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-erlang.min.js.map">
-      <DependentUpon>lang-erlang.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-go.min.js.map">
-      <DependentUpon>lang-go.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-hs.min.js.map">
-      <DependentUpon>lang-hs.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-lisp.min.js.map">
-      <DependentUpon>lang-lisp.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-llvm.min.js.map">
-      <DependentUpon>lang-llvm.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-lua.min.js.map">
-      <DependentUpon>lang-lua.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-matlab.min.js.map">
-      <DependentUpon>lang-matlab.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-ml.min.js.map">
-      <DependentUpon>lang-ml.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-mumps.min.js.map">
-      <DependentUpon>lang-mumps.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-n.min.js.map">
-      <DependentUpon>lang-n.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-pascal.min.js.map">
-      <DependentUpon>lang-pascal.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-proto.min.js.map">
-      <DependentUpon>lang-proto.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-r.min.js.map">
-      <DependentUpon>lang-r.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-rd.min.js.map">
-      <DependentUpon>lang-rd.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-scala.min.js.map">
-      <DependentUpon>lang-scala.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-sql.min.js.map">
-      <DependentUpon>lang-sql.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-tcl.min.js.map">
-      <DependentUpon>lang-tcl.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-tex.min.js.map">
-      <DependentUpon>lang-tex.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-vb.min.js.map">
-      <DependentUpon>lang-vb.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-vhdl.min.js.map">
-      <DependentUpon>lang-vhdl.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-wiki.min.js.map">
-      <DependentUpon>lang-wiki.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-xq.min.js.map">
-      <DependentUpon>lang-xq.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\lang-yaml.min.js.map">
-      <DependentUpon>lang-yaml.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\prettify.min.js.map">
-      <DependentUpon>prettify.min.js</DependentUpon>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Scripts\run_prettify.min.js.map">
-      <DependentUpon>run_prettify.min.js</DependentUpon>
-    </Content>
+    <Content Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

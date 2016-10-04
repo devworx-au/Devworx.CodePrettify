@@ -12,5 +12,11 @@ namespace Devworx.CodePrettify.Models {
             get { return this.Retrieve(x => x.Theme); }
             set { this.Store(x => x.Theme, value); }
         }
+
+        public bool UseAutoLoader
+        {
+            get { return this.Retrieve(x => x.UseAutoLoader); }
+            set { this.Store(x => x.UseAutoLoader, value); }
+        }
     }
 }
